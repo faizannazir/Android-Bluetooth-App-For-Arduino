@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryDarkColor"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="2dp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="761dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="221dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="70"
+            android:autofillHints="SelectDevice"
+            android:background="@drawable/custom_spinner"
+            android:contentDescription="@string/Spinner"
+            android:dropDownWidth="match_parent" />
+
+        <Button
+            android:id="@+id/fetch"
+            android:layout_width="437dp"
+            android:layout_height="146dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="30"
+            android:onClick="loadDevices"
+            android:text="@string/fetch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="307dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <FrameLayout
+            android:layout_width="311dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="@string/Label" />
+
+            <Button
+                android:id="@+id/tmp"
+                android:layout_width="229dp"
+                android:layout_height="216dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/button"
+                android:contentDescription="@string/connect"
+                android:freezesText="false"
+                android:gravity="center"
+                android:maxLines="1"
+                android:onClick="clicked"
+                android:text="@string/connect"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="311dp"
+                android:layout_height="match_parent"
+                android:elevation="3dp"
+                android:indeterminate="false"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="175"
+                tools:progress="0"
+                tools:rotation="170" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="31dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="31dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="64dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="678dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

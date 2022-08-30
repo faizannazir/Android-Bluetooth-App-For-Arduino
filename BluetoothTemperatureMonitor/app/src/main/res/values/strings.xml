@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bluetooth Temperature Monitor</string>
+    <string name="Label">Temperature</string>
+    <string name="outputText">.</string>
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting</string>
+    <string name="fetch">Load devices</string>
+    <string name="fail">Not Connected</string>
+    <string name="connected">Connected</string>
+    <string name="disconnect">Disconnected</string>
+    <string name="Spinner">Select Device</string>
+    <string name="Select">Select Device</string>
+    <string name="turnOn">TURN ON BLUETOOTH</string>
+    <string name="turnOff">"Turn OFF BLUETOOTH"</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+</resources>
